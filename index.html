@@ -8,7 +8,22 @@
     <!-- <script type="text/jsx" src="./script.jsx"></script> -->
     <script type="text/jsx">
         const app = document.getElementById('app');
-        ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app);
+
+        function Header({ title }) {
+            console.log(title);
+            return <h1>{title ? title : 'Default title'}</h1>;
+        }
+        function HomePage() {
+            return (
+                <div>
+                    <Header title="React 💙" />
+                    <Header />
+                    <Header title="I 💙 Fart" />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<HomePage />, app);
     </script>
 </body>
 
