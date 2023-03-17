@@ -14,11 +14,19 @@
             return <h1>{title ? title : 'Default title'}</h1>;
         }
         function HomePage() {
+            const names = ['Ada Lavelace', 'Grace Hopper', 'Margaret Hamilton'];
+
             return (
                 <div>
                     <Header title="React 💙" />
                     <Header />
                     <Header title="I 💙 Fart" />
+                    <Header title="Develop. Preview. Ship.🚀" />
+                    <ul>
+                        {names.map((name, index) => (
+                            <li key={index}>{name}</li>
+                        ))}
+                    </ul>
                 </div>
             );
         }
